@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}მთავარი გვერდი{% endblock %}
+
+{% block content %}
+
+<!-- Hero სექცია -->
+<div class="hero text-center rounded-4 p-5 mb-5">
+    <h1 class="display-4 fw-bold">იპოვე შენი იდეალური მანქანა</h1>
+    <p class="lead mb-4">
+        იქირავე ან იყიდე მანქანა მარტივად და უსაფრთხოდ — 
+        დიდი არჩევანი, საუკეთესო ფასები.
+    </p>
+    <a href="{% url 'car_list' %}" class="btn btn-primary btn-lg me-2">დაათვალიერე მანქანები</a>
+    <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg">გაიგე მეტი</a>
+</div>
+
+<!-- დამატებითი სექცია (მაგ. ატრიბუტები/უპირატესობები) -->
+<div class="row text-center g-4">
+    <div class="col-md-4">
+        <h5>🚗 დიდი არჩევანი</h5>
+        <p>ასობით მანქანა სხვადასხვა კატეგორიიდან</p>
+    </div>
+    <div class="col-md-4">
+        <h5>💰 საუკეთესო ფასები</h5>
+        <p>გამჭვირვალე ფასწარმოქმნა დამალული გადასახადების გარეშე</p>
+    </div>
+    <div class="col-md-4">
+        <h5>🔒 უსაფრთხო გარიგება</h5>
+        <p>დადასტურებული გამყიდველები და დაცული პლატფორმა</p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}ჩვენ შესახებ - CarMarket{% endblock %}
+
+{% block content %}
+
+<!-- სათაური -->
+<div class="text-center mb-5">
+    <h1 class="fw-bold">ჩვენ შესახებ</h1>
+    <p class="lead text-muted">
+        CarMarket არის თანამედროვე პლატფორმა, სადაც მანქანების ქირაობა და ყიდვა მარტივი და სანდოა.
+    </p>
+</div>
+
+<!-- მისია -->
+<div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <h2 class="mb-3">ჩვენი მისია</h2>
+        <p>
+            ჩვენ გვჯერა, რომ მანქანის პოვნა — გასაქირავებლად თუ საყიდლად — არ უნდა იყოს რთული და დროის დამხარჯავი პროცესი.
+            ამიტომ შევქმენით პლატფორმა, სადაც ნებისმიერს შეუძლია მარტივად გამოაქვეყნოს საკუთარი მანქანა
+            ან იპოვოს ის, რაც სჭირდება — ყველაფერი ერთ სივრცეში.
+        </p>
+        <p>
+            გამჭვირვალობა, სანდოობა და მოხერხებულობა — ეს არის ის სამი პრინციპი, რომელზეც ვაშენებთ ჩვენს სერვისს.
+        </p>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="p-5 bg-light rounded-4">
+            <span style="font-size: 5rem;">🚘</span>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<!-- როგორ მუშაობს -->
+<h2 class="text-center mb-4">როგორ მუშაობს</h2>
+<div class="row text-center g-4 mb-5">
+    <div class="col-md-4">
+        <div class="p-4">
+            <span style="font-size: 2.5rem;">📝</span>
+            <h5 class="mt-3">1. დარეგისტრირდი</h5>
+            <p class="text-muted">შექმენი ანგარიში წამებში და გახდი ჩვენი საზოგადოების წევრი.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-4">
+            <span style="font-size: 2.5rem;">🚗</span>
+            <h5 class="mt-3">2. დაათვალიერე ან დაამატე</h5>
+            <p class="text-muted">მოძებნე შენთვის სასურველი მანქანა, ან გამოაქვეყნე საკუთარი განცხადება.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-4">
+            <span style="font-size: 2.5rem;">🤝</span>
+            <h5 class="mt-3">3. დაუკავშირდი</h5>
+            <p class="text-muted">დაუკავშირდი გამყიდველს ან მეიჯარეს და დახურე გარიგება მარტივად.</p>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<!-- რატომ ჩვენ -->
+<div class="row g-4">
+    <div class="col-md-4">
+        <h5>🔒 უსაფრთხოება</h5>
+        <p class="text-muted">ყველა მომხმარებელი გადის რეგისტრაციას, რაც ზრდის პლატფორმის სანდოობას.</p>
+    </div>
+    <div class="col-md-4">
+        <h5>⚡ სისწრაფე</h5>
+        <p class="text-muted">განცხადების გამოქვეყნება და ძიება წუთებში სრულდება.</p>
+    </div>
+    <div class="col-md-4">
+        <h5>💬 მხარდაჭერა</h5>
+        <p class="text-muted">კითხვების შემთხვევაში ყოველთვის ვართ დასაკავშირებლად.</p>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="text-center bg-dark text-white rounded-4 p-5 mt-5">
+    <h3>მზად ხარ დასაწყებად?</h3>
+    <p class="mb-4">შეუერთდი CarMarket-ს დღესვე და იპოვე შენი შემდეგი მანქანა.</p>
+    <a href="{% url 'signup' %}" class="btn btn-primary btn-lg">დარეგისტრირდი ახლავე</a>
+</div>
+
+{% endblock %}

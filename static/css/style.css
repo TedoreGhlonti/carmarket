@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    
+    /* sticky footer-ისთვის */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;  /* ეს ავსებს დარჩენილ სივრცეს, footer-ს ძირს აჭერს */
+}
+
+footer {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #2c3e50, #4a6785);
+    color: white;
+}
+
+.hero .btn-outline-secondary {
+    color: white;
+    border-color: white;
+}
+
+.hero .btn-outline-secondary:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Car card styling */
+.car-card {
+    overflow: hidden;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.car-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.car-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.car-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

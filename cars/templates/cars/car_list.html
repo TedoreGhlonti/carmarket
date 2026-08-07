@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}მანქანები - CarMarket{% endblock title %}
+
+{% block content %}
+<style>
+    .car-image-wrapper {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        background-color: #e9ecef;
+    }
+    .car-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+</style>
+
+<h1 class="mb-4">ხელმისაწვდომი მანქანები</h1>
+
+<div class="row g-4">
+    {% for car in cars %}
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="car-image-wrapper">
+                {% if car.image %}
+                    <img src="{{ car.image.url }}" class="car-image" alt="{{ car.brand }} {{ car.model }}">
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+                <p class="card-text text-muted">{{ car.year }} წელი</p>
+                <p class="card-text fw-bold">{{ car.price }} $</p>
+                <span class="badge {% if car.status == 'rent' %}bg-info{% else %}bg-success{% endif %}">
+                    {{ car.get_status_display }}
+                </span>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <a href="{% url 'car_detail' car.pk %}" class="btn btn-outline-primary w-100">დეტალები</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>ჯერჯერობით მანქანები არ არის დამატებული.</p>
+    {% endfor %}
+</div>
+{% endblock content %}
